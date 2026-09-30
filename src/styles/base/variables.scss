@@ -1,0 +1,53 @@
+// None
+$primaryColor: #002F87;
+$primaryColorHover: #60b7ff;
+$primaryColorLight: #36A1FA;
+$primaryColorDark: #152342;
+$primaryColorDisable: #818181;
+
+$secondaryColor: #7a89a8;
+$secondaryColorHover: #95a2c0;
+$secondaryColorLight: #7791c9;
+$secondaryColorDark: #3a3e47;
+$secondaryColorDisable: #818181;
+
+$errorColor: #ee0000;
+$errorColorLight: #fff1f1;
+
+// Avvillas
+/*
+$primaryColor: #e1001d;
+$primaryColorHover: #f83a54;
+$primaryColorLight: #ff98a6;
+$primaryColorDark: #a70016;
+$primaryColorDisable: #818181;
+
+$secondaryColor: #0048db;
+$secondaryColorHover: #155eee;
+$secondaryColorLight: #80aaff;
+$secondaryColorDark: #002d86;
+$secondaryColorDisable: #818181;
+*/
+
+
+// Bogotá
+/*
+$primaryColor: #0043a9;
+$primaryColorHover: #105ed4;
+$primaryColorLight: #76adff;
+$primaryColorDark: #002864;
+$primaryColorDisable: #818181;
+
+$secondaryColor: #edbc2c;
+$secondaryColorHover: #fad360;
+$secondaryColorLight: #fff6da;
+$secondaryColorDark: #a37a00;
+$secondaryColorDisable: #818181;
+*/
+
+$colorText: #131112;
+
+:export {
+  primaryColor: $primaryColor;
+  secondaryColor: $secondaryColor;
+}

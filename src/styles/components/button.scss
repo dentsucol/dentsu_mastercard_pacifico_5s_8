@@ -1,0 +1,72 @@
+.mc-button-container {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  button {
+    display: block;
+    width: 100%;
+    border: 0px;
+    height: 45px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    .inline-loader {
+      width: 30px;
+      height: auto;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__primary {
+    button {
+      background-color: $primaryColor;
+      color: #fff;
+
+      &:hover {
+        border-radius: 8px;
+        border: 1px solid var(--Outline-Low, #E0EEFE);
+        background-color: var(--Button-Hover, #081F2D) !important;
+      }
+      
+      &.mc-button-container__status--inactive {
+        background-color: #EEEEEE;
+        cursor: no-drop;
+        color: #5A5A5A !important;
+        opacity: 1;
+        font-weight: 600 !important;
+      }
+    }
+  }
+
+  &__secondary {
+    button {
+      background-color: #fff;
+      color: $primaryColor;;
+      border: 1px solid $primaryColor;
+
+      &:hover {
+        background-color: $primaryColorLight;
+      }
+      &.mc-button-container__status--inactive {
+        background-color: $secondaryColorDisable;
+        cursor: no-drop;
+        opacity: 0.7;
+      }
+    }
+  }
+  &.pushModalBTN{
+    button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+    }
+  }
+}

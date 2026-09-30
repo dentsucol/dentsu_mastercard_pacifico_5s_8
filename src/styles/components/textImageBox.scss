@@ -1,0 +1,30 @@
+.mc-image-text-container {
+  position: relative;
+
+  &__colImage {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &__colText {
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 20px 10px;
+  }
+
+  &.mc-image-text-container-type-1 {
+
+  }
+  &.mc-image-text-container-type-2 {
+    
+  }
+  &.mc-image-text-container-type-3 {
+    
+  }
+  &.mc-image-text-container-type-4 {
+    
+  }
+}

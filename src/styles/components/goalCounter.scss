@@ -1,0 +1,27 @@
+.mc-goal-counter {
+	position: relative;
+	box-sizing: border-box;
+	padding: 20px;
+	text-align: center;
+
+	color: $primaryColorLight;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 32px;
+    max-width: 500px;
+    margin: 0 auto;
+
+	div, span{
+	font-family: "Accord Alternate ExtraBold" !important;
+
+	}
+	
+	span {
+		color: var(--Text-Accent, #002F87);
+	}
+
+	@media only screen and (min-width: 992px) {
+		width: 100%;
+	}
+}

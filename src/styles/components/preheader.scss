@@ -1,0 +1,28 @@
+.Preheader {
+  background: var(--Background-Background-Medium, #B9DCFE);
+  text-align: center;
+  padding: var(--Size-Md, 12px) var(--Size-Md, 16px);
+
+  h3
+{
+    margin: 0;
+    margin-bottom: 2px;
+    color: var(--Text-Text-Title, #07254A);
+    text-align: center;    
+    font-size: var(--Fonts-Size-20, 20px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Fonts-Line-height-24, 24px);
+    /* 120% */
+  }
+
+  p {
+    color: var(--Text-Text-Title, #07254A);
+      
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+  }
+}

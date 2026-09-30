@@ -1,0 +1,108 @@
+.mc-faqs-container {
+  margin: 28px 0px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+
+  .mc-accordeon-container {
+    position: relative;
+    margin: 14px auto;
+    max-width: 860px;
+
+    hr{
+      margin: 0px 0px 16px;
+      width: calc(100% - 30px);
+      margin: auto;
+
+      @media only screen and (max-width: 992px) {
+        width: 100%;
+      }
+    }
+
+    &.active {
+  
+      .mc-accordeon-toggle-icon {
+        transform: rotate(-180deg) !important;
+        top: 13px !important;
+      }
+    }
+  
+    .mc-accordeon-toggle {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      padding: 16px 14px;
+      padding-right: 58px;
+    
+      color: var(--color-primario-005EB8-Base, #002F87);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      box-sizing: border-box;
+  
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+    
+    .mc-accordeon-toggle-icon {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      right: 16px;
+      top: 17px;
+      -webkit-transition: all .2s cubic-bezier(.77,0,.175,1);
+      -moz-transition: all .2s cubic-bezier(.77,0,.175,1);
+      -o-transition: all .2s cubic-bezier(.77,0,.175,1);
+      transition: all .2s cubic-bezier(.77,0,.175,1);
+    
+      svg {
+        width: 100%;
+        height: auto;
+        transform: scale(0.7);
+
+        path {
+          stroke: $primaryColorDark;
+        }
+      }
+    }
+    
+    .mc-accordeon-content div p{
+      padding-top: 0px;
+      padding-right: 45px;
+      padding-left: 16px;
+      text-align: left;
+      color: var(--Text-Paragraph, #333333);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      font-family: 'Accord Alternate';
+      }
+
+      .mc-accordeon-content div u,
+      .mc-accordeon-content div li u,
+      .mc-accordeon-content div p u{
+        color: var(--Text-Paragraph, #333);
+        font-family: "Accord Alternate";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+      }
+
+      .mc-accordeon-content div li{
+        color: var(--Text-Paragraph, #333333);
+        font-family: 'Accord Alternate';
+        font-weight: 400;
+      }
+  }
+
+  &.mc-faqs-container-type-1 {
+
+  }
+  &.mc-faqs-container-type-2 {
+
+  }
+}

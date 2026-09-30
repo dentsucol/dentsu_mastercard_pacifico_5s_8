@@ -1,0 +1,433 @@
+.mc-tour-container {
+  position: fixed;
+  z-index: 99999;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  &__overlays {
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    div {
+      background: #042756db;
+      position: absolute;
+      z-index: 1;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        height: 0;
+      }
+    }
+  }
+
+  &__window {
+    width: 340px;
+    height: 240px;
+    border-radius: 16px;
+    background: #000;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    z-index: 3;
+    background: #fff;
+    text-align: center;
+    padding: 0 26px;
+    padding-bottom: 8px;
+
+    @media only screen and (max-width: 992px) {
+      width: 95%;
+      box-sizing: border-box;
+      height: 348px;
+      padding-top: 10px;
+    }
+
+    svg {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      z-index: 2;
+      top: -35px;
+      left: 0px;
+      right: 0px;
+      margin: auto;
+      transform: rotate(180deg);
+      opacity: 0;
+    }
+
+    h2 {
+      color: var(--Text-Text-Title, #07254A);
+      text-align: center;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 26px; /* 108.333% */
+    }
+
+    p {
+      color: var(--Text-Text-Title, #07254A) !important;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-align: left;
+    }
+
+    &--actions {
+      position: relative;
+      margin-bottom: 14px;
+      margin-top: 30px;
+      button {
+        width: 45%;
+        height: 40px;
+
+        @media only screen and (max-width: 992px) {
+          width: 100%;
+          display: block;
+        }
+
+        &:nth-child(1) {
+          color: var(--Button-Default, #005EB8);
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-decoration-line: underline;
+          border: 0px;
+          cursor: pointer;
+          background-color: transparent;
+
+          @media only screen and (max-width: 992px) {
+            position: relative;
+            top: 40px;
+          }
+        }
+        &:nth-child(2) {
+          border-radius: var(--S, 8px);
+          background: var(--Button-Default, #005EB8);
+          color: var(--Button-Invert, #F0F7FF);
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          border: 0px;
+          cursor: pointer;
+
+          @media only screen and (max-width: 992px) {
+            position: relative;
+            top: -44px;
+          }
+        }
+      }
+    }
+  }
+
+  &.mc-tour-step-0 {
+    .mc-tour-container__overlays {
+      div:nth-child(1) {
+        top: 52px;
+
+        @media only screen and (max-width: 992px) {
+          bottom: 70px;
+        }
+      }
+    }
+  }
+  &.mc-tour-step-1 {
+    .mc-tour-container__overlays {
+      div:nth-child(1) {
+        top: 52px;
+
+        @media only screen and (max-width: 992px) {
+          bottom: 70px;
+        }
+      }
+    }
+    .mc-tour-container__window {
+      top: 90px;
+      right: -283px;
+      bottom: auto;
+
+      @media only screen and (max-width: 992px) {
+        width: 95%;
+        box-sizing: border-box;
+        height: 348px;
+        right: 0px;
+        top: auto;
+        bottom: 120px;
+        height: auto;
+      }
+
+      svg {
+        opacity: 1;
+        top: -32px;
+
+        @media only screen and (max-width: 992px) {
+          transform: rotate(0deg);
+          top: auto;
+          bottom: -34px;
+          left: -88px;
+        }
+      }
+    }
+  }
+  &.mc-tour-step-2 {
+    .mc-tour-container__overlays {
+      div:nth-child(1) {
+        top: 52px;
+
+        @media only screen and (max-width: 992px) {
+          bottom: 70px;
+        }
+      }
+    }
+    .mc-tour-container__window {
+      top: 90px;
+      right: -442px;
+      bottom: auto;
+
+      @media only screen and (max-width: 992px) {
+        width: 95%;
+        box-sizing: border-box;
+        height: 348px;
+        right: 0px;
+        top: auto;
+        bottom: 120px;
+        height: auto;
+      }
+      
+      svg {
+        opacity: 1;
+        top: -32px;
+
+        @media only screen and (max-width: 992px) {
+          transform: rotate(0deg);
+          top: auto;
+          bottom: -34px;
+          left: 95px;
+        }
+      }
+    }
+  }
+  &.mc-tour-step-3 {
+    .mc-tour-container__overlays {
+      div:nth-child(1) {
+        top: 52px;
+
+        @media only screen and (max-width: 992px) {
+          bottom: 70px;
+        }
+      }
+    }
+    .mc-tour-container__window {
+      top: 90px;
+      right: -770px;
+      bottom: auto;
+      height: 268px;
+
+      @media only screen and (max-width: 992px) {
+        width: 95%;
+        box-sizing: border-box;
+        height: 348px;
+        right: 0px;
+        top: auto;
+        bottom: 120px;
+        height: auto;
+      }
+
+      svg {
+        opacity: 1;
+        top: -32px;
+        
+        @media only screen and (min-width: 992px) {
+          right: -100px;
+        }
+
+        @media only screen and (max-width: 992px) {
+          transform: rotate(0deg);
+          top: auto;
+          bottom: -34px;
+          left: auto;
+          right: 26px;
+        }
+      }
+    }
+  }
+  &.mc-tour-step-4 {
+    .mc-tour-container__overlays {
+      div:nth-child(1) {
+        top: 0px;
+        bottom: auto;
+        height: 264px;
+
+        @media only screen and (max-width: 992px) {
+          height: 310px;
+          bottom: auto;
+        }
+      }
+      div:nth-child(2) {
+        top: 484px;
+        bottom: 0px;
+        height: auto;
+
+        @media only screen and (max-width: 992px) {
+          display: none;
+        }
+      }
+      div:nth-child(3) {
+        right: 0px;
+        left: -1094px;
+        width: 300px;
+        height: 220px;
+        top: 264px;
+        bottom: auto;
+        margin: auto;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          right: 100%;
+          top: 0px;
+          height: 100%;
+          background: rgba(4, 39, 86, 0.8588235294);
+          z-index: 1;
+        }
+
+        @media only screen and (max-width: 992px) {
+          display: none;
+        }
+      }
+      div:nth-child(4) {
+        right: 0px;
+        left: auto;
+        width: 50%;
+        height: 220px;
+        top: 264px;
+        bottom: auto;
+        margin: auto;
+
+        @media only screen and (max-width: 992px) {
+          display: none;
+        }
+      }
+    }
+    .mc-tour-container__window {
+      bottom: auto;
+      top: 34px;
+      left: -398px;
+      height: 184px;
+
+      @media only screen and (max-width: 992px) {
+        width: 95%;
+        box-sizing: border-box;
+        height: 348px;
+        right: 0px;
+        left: 0px;
+        top: 35px;
+        bottom: auto;
+        height: auto;
+        padding-top: 0px;
+        padding-bottom: 2px;
+      }
+
+      svg {
+        opacity: 1;
+        top: auto;
+        bottom: -30px;
+        transform: rotate(0deg) scale(0.9);
+      }
+    }
+  }
+  &.mc-tour-step-5 {
+    .mc-tour-container__overlays {
+      div:nth-child(1) {
+        top: 0px;
+        height: 318px;
+
+        @media only screen and (max-width: 992px) {
+          height: 400px;
+        }
+      }
+    }
+    .mc-tour-container__window {
+      bottom: auto;
+      top: 30px;
+
+      @media only screen and (max-width: 992px) {
+        width: 95%;
+        box-sizing: border-box;
+        height: 348px;
+        right: 0px;
+        left: 0px;
+        top: 100px;
+        bottom: auto;
+        height: auto;
+      }
+
+      svg {
+        opacity: 1;
+        top: auto;
+        bottom: -30px;
+        transform: rotate(0deg);
+      }
+    }
+  }
+  &.mc-tour-step-6 {
+    .mc-tour-container__overlays {
+      div:nth-child(1) {
+        top: 0px;
+        height: 300px;
+        
+        @media only screen and (max-width: 992px) {
+          height: 320px;
+        }
+      }
+    }
+    .mc-tour-container__window {
+      bottom: auto;
+      top: 22px;
+
+      @media only screen and (max-width: 992px) {
+        width: 95%;
+        box-sizing: border-box;
+        height: 348px;
+        right: 0px;
+        left: 0px;
+        top: 35px;
+        bottom: auto;
+        height: auto;
+      }
+
+      svg {
+        opacity: 1;
+        top: auto;
+        bottom: -26px;
+        transform: rotate(0deg) scale(0.7);
+      }
+    }
+  }
+  &.mc-tour-step-7 {
+    display: none !important;
+  }
+}
+
+.noscroll {
+  overflow: hidden;
+}

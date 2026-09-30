@@ -1,0 +1,14 @@
+.mc-app-rely {
+  position: relative;
+  display: table;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.mc-app-centry {
+  position: relative;
+  vertical-align: middle;
+  display: table-cell;
+  z-index: 1;
+}

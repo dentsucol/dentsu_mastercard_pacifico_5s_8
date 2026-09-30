@@ -1,0 +1,99 @@
+.mc-progressBar-container {
+  position: relative;
+  height: 35px;
+  background: transparent;
+  margin: 15px 0;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  background-color: rgb(231, 231, 231);
+
+  .mc-progressBar-progress {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 0;
+    background-color: $primaryColor;
+    margin: auto;
+    z-index: 1;
+    border-radius: 4px;
+    border: 1px solid #ffff;
+
+    span {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: $secondaryColor;
+      border-radius: 4px;
+      right: -4px;
+      top: -2px;
+      z-index: 1;
+    }
+  }
+
+  .mc-progressBar-percent {
+    z-index: 2;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    color: $colorText;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 22px;
+    top: 6px;
+
+    &.white {
+      color: #fff;
+    }
+  }
+
+  .mc-progressBar-bubble {
+    position: absolute;
+    width: 38px;
+    height: auto;
+    bottom: 2px;
+    z-index: 2;
+
+    img {
+      width: 100%;
+      height: auto;
+      position: relative;
+      left: -19px;
+    }
+  }
+
+  .mc-progressBar-title {
+    position: absolute;
+    left: 0px;
+    top: -26px;
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0.5;
+  }
+
+  .mc-progressBar-label {
+    position: absolute;
+    right: 0px;
+    top: -25px;
+    font-size: 13px;
+  }
+
+  &.has-title {
+    margin-top: 25px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  &.col-2 {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+  }
+}

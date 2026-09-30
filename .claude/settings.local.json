@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -L -o \"C:\\\\Users\\\\ocaste01\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-ocaste01-OneDrive---dentsu-projects-front-mastercard-pacifico-5s-8\\\\d54f6a8f-ef89-4182-be87-bf5a4e3f2698\\\\scratchpad\\\\screenshot.png\" \"https://www.figma.com/api/mcp/asset/5d3aeb7a-2f53-4829-87f0-0c05050c905d.png\")",
+      "Bash(npm start *)"
+    ]
+  }
+}

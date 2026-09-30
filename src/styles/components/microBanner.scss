@@ -1,0 +1,53 @@
+.MicroBanner {
+  margin: 30px 0;
+  .banner_content {
+    display: flex;
+    max-width: 704px;
+    padding: 24px 17px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 0 auto;
+
+    background: var(--Gradient, linear-gradient(180deg, #0575E6 0%, #023B82 132.61%));
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+
+    .banner_header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+
+      .banner_img {
+        img {
+          max-width: 60px;
+        }
+      }
+
+      .banner_title {
+        h3 {
+          color: var(--Text-Inverted, #F0F7FF);
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+    }
+
+    .banner_body {
+      p {
+        color: var(--Text-Inverted, #F0F7FF);        
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+      }
+    }
+  }
+}
