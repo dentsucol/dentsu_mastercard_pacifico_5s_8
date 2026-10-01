@@ -27,7 +27,7 @@ function Header({
   const [showOthers, setShowOthers] = useState(false)
   const [hasChildren, setHasChildren] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
-  const [showProgress, setShowProgress] = useState(true)
+  const [showProgress, setShowProgress] = useState(false)
   const { width } = useWidth();
   const imgRef = useRef(null)
   const isSubLevel = (children) => {

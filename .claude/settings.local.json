@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(curl -L -o \"C:\\\\Users\\\\ocaste01\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-ocaste01-OneDrive---dentsu-projects-front-mastercard-pacifico-5s-8\\\\d54f6a8f-ef89-4182-be87-bf5a4e3f2698\\\\scratchpad\\\\screenshot.png\" \"https://www.figma.com/api/mcp/asset/5d3aeb7a-2f53-4829-87f0-0c05050c905d.png\")",
-      "Bash(npm start *)"
+      "Bash(npm start *)",
+      "mcp__claude_ai_Figma__get_screenshot",
+      "Bash(curl -L -o \"C:\\\\Users\\\\ocaste01\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-ocaste01-OneDrive---dentsu-projects-front-mastercard-pacifico-5s-8\\\\d54f6a8f-ef89-4182-be87-bf5a4e3f2698\\\\scratchpad\\\\progress.png\" \"https://www.figma.com/api/mcp/asset/41261ea0-0fca-463f-a8e1-a235f7371245.png\")",
+      "Bash(curl -L -o \"C:\\\\Users\\\\ocaste01\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-ocaste01-OneDrive---dentsu-projects-front-mastercard-pacifico-5s-8\\\\d54f6a8f-ef89-4182-be87-bf5a4e3f2698\\\\scratchpad\\\\figma_tarjeta.png\" \"https://www.figma.com/api/mcp/asset/86ed61f2-0dca-4e63-8e8a-b8859e45fa8e.png\")",
+      "mcp__claude_ai_Figma__get_design_context",
+      "Bash(git checkout *)",
+      "mcp__claude_ai_Figma__download_assets"
     ]
   }
 }

@@ -55,7 +55,7 @@ function TestQuestions({
             ? <h4 className='mc-test-questions--response'>¡Gracias por tu respuesta!</h4>
             : title
               ? <h4>{title}</h4>
-              : <h4>¿Este contenido te ayudó a entender la dinámica de la campaña?</h4>
+              : <h4>¿Te gustó la experiencia dentro de la plataforma?</h4>
           }
           
         {!ok &&

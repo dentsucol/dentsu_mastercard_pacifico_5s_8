@@ -152,6 +152,26 @@ function Icon(props) {
           </svg>
         </span>
       }
+      {props.name === "arrow_white_down" &&
+        <span className={`icon-${props.name}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path fillRule="evenodd" clipRule="evenodd" d="M3.71209 9.80584C4.0782 9.43972 4.6718 9.43972 5.03791 9.80584L10 14.7679L14.9621 9.80584C15.3282 9.43972 15.9218 9.43972 16.2879 9.80584C16.654 10.172 16.654 10.7655 16.2879 11.1317L10.6629 16.7567C10.2968 17.1228 9.7032 17.1228 9.33709 16.7567L3.71209 11.1317C3.34597 10.7655 3.34597 10.172 3.71209 9.80584Z" fill="white"/>
+            <path fillRule="evenodd" clipRule="evenodd" d="M10 2.96875C10.5178 2.96875 10.9375 3.38848 10.9375 3.90625V15.3125C10.9375 15.8303 10.5178 16.25 10 16.25C9.48223 16.25 9.0625 15.8303 9.0625 15.3125V3.90625C9.0625 3.38848 9.48223 2.96875 10 2.96875Z" fill="white"/>
+          </svg>
+        </span>
+      }
+      { props.name === "gift_white" &&
+        <span className={`icon-${props.name}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M16.6654 9.99976V17.8331C16.6654 18.1093 16.4415 18.3331 16.1654 18.3331H3.83203C3.55589 18.3331 3.33203 18.1093 3.33203 17.8331V9.99976" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M17.8346 5.83313H2.16797C1.89183 5.83313 1.66797 6.05699 1.66797 6.33313V9.4998C1.66797 9.77596 1.89183 9.9998 2.16797 9.9998H17.8346C18.1108 9.9998 18.3346 9.77596 18.3346 9.4998V6.33313C18.3346 6.05699 18.1108 5.83313 17.8346 5.83313Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M10 18.3331V5.83313" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M10.0013 5.83317H6.2513C5.69877 5.83317 5.16886 5.61368 4.77816 5.22298C4.38746 4.83228 4.16797 4.30237 4.16797 3.74984C4.16797 3.1973 4.38746 2.6674 4.77816 2.2767C5.16886 1.886 5.69877 1.6665 6.2513 1.6665C9.16797 1.6665 10.0013 5.83317 10.0013 5.83317Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M10 5.83317H13.75C14.3025 5.83317 14.8324 5.61368 15.2232 5.22298C15.6138 4.83228 15.8333 4.30237 15.8333 3.74984C15.8333 3.1973 15.6138 2.6674 15.2232 2.2767C14.8324 1.886 14.3025 1.6665 13.75 1.6665C10.8333 1.6665 10 5.83317 10 5.83317Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+
+      }
 
 
     </div>

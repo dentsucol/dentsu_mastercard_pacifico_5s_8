@@ -6,13 +6,14 @@ import ProgressBar from '../atoms/ProgressBar'
 import GoalCounter from '../atoms/GoalCounter'
 import Tabs from '../organisms/Tabs'
 import { getProgressPercent, getPrice, getDateNow } from '../../utils/functions'
-import Columns, { Col } from '../../layouts/Columns/Columns'
 import TestQuestions from '../organisms/TestQuestions'
 import { sendDataLayer } from '../../utils/functions'
 import MicroBanner from '../molecules/MicroBanner'
 import InfoCatalog from '../atoms/InfoCatalog'
 import useWidth from '../../hooks/useWidth'
 import FaqsFeed from '../organisms/FaqsFeed'
+import Icon from '../atoms/Icon'
+import BannerRedeemed from '../molecules/BannerRedeemed'
 
 function Progress() {
   const { context } = useContext(StateController)
@@ -81,99 +82,58 @@ function Progress() {
   const Goal = () => {
     return (
       <>
-        {/* Sección Meta */}
-        <h2 className="mc-tabs-container--content__body--title">Meta</h2>
-        <p style={{ marginBottom: '30px', marginTop: '0px', fontWeight: 600, fontSize: '16px' }}>
-          Revisa tu meta y cuánto has comprado.
-        </p>
-
-        <Columns desktop={2} mobile={1} height={200}>
-          <Col>
-            {/* Cajas de Meta y Facturación */}
-            <div className="mc-tabs-container--content__body--boxes">
-              <div className="mc-tabs-container--content__body--box">
-                <span>Meta:</span>
-                <div>US{getPrice(context ? context.user[`goal_amount_1`] : 0)}</div>
-
-                {/* <div>$xx.xxx.xxx</div> */}
+        {/* Sección Dos Metas */}
+        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div style={{ width: '335px' }}>
+            {/* Primera Meta: Facturación */}
+            <div className="mc-goal-card">
+              <div className="mc-goal-card__header">
+                <h3>Primera meta: facturación</h3>
               </div>
-              <div className="mc-tabs-container--content__body--box">
-                <span>Tu facturación:</span>
-                <div>
-                  US{getPrice(context && context.tracing ? context.tracing[`amount_1`] : 0)}
+              <div className="mc-goal-card__body">
+                <div className="mc-goal-card__amount">
+                  US{getPrice(context ? context.user[`goal_amount_1`] : 0)}
                 </div>
+                <p className="mc-goal-card__label">Asi va tu progreso</p>
+                <div className="mc-goal-card__progress">
+                  <p>Llevas: US{getPrice(context && context.tracing ? context.tracing[`amount_1`] : 0)}</p>
+                  <div className="mc-tabs-container--content__body--progress">
+                    <ProgressBar
+                      percent={getProgressPercent(context)}
+                      label={`${getProgressPercent(context)}%`}
+                    />
+                  </div>
 
-                {/* <div>$xx.xxx.xxx</div> */}
+                </div>
               </div>
             </div>
+          </div>
 
-            {/* Sección Progreso */}
-            <h2 className="mc-tabs-container--content__body--title">Progreso</h2>
-            <p
-              style={{ marginBottom: '20px', marginTop: '0px', fontWeight: 600, fontSize: '16px' }}
-            >
-              Conoce tu avance hacia la meta.
-            </p>
-
-            <div className="mc-tabs-container--content__body--progress">
-              <ProgressBar
-                percent={getProgressPercent(context)}
-                label={`${getProgressPercent(context)}%`}
-              />
-            </div>
-
-            <div className="major-award-page">
-              <InfoCatalog
-                dateText={context && context.tracing ? context.tracing.date_update : '06/11/2026'}
-              // dateText='XX/XX/XX'
-              />
-            </div>
-          </Col>
-
-          <Col>
-            {context && context.tracing && context.tracing.winner_1 == 1 ? (
-              <div className="progress-banner__winner">
-                <img
-                  className="progress-banner__winner--img"
-                  src="/assets/images/card_progress_winner.png"
-                  alt="banner winner progress"
-                />
-                {context?.redemtions?.length === 0 ? (
-                  <div className="progress-banner__winner--cta">
-                    <span>¡Felicidades, cumpliste tu meta!</span>
-                    <p>Ahora puedes reclamar tu premio.</p>
-                    <a
-                      data-gtm-event="progress"
-                      href="/premios"
-                      onClick={() => sendDataWinner('Canjear bono')}
-                    >
-                      Canjear bono
-                    </a>
-                  </div>
-                ) : (
-                  <div className="progress-banner__winner--cta redemption">
-                    <span>¡Ya redimiste tu bono!</span>
-                    <p>Puedes consultar su detalle.</p>
-                    <a
-                      data-gtm-event="progress"
-                      href="/mis-redenciones"
-                      onClick={() => sendDataWinner('Ir al historial de bonos')}
-                    >
-                      {' '}
-                      Ir al historial de bonos
-                    </a>
-                  </div>
-                )}
+          <div style={{ width: '340px' }}>
+            {/* Segunda Meta: Categorías */}
+            <div className="mc-goal-card">
+              <div className="mc-goal-card__header">
+                <h3>Segunda meta: categorías</h3>
               </div>
-            ) : (
-              <img
-                className="progress-banner"
-                src="/assets/images/bannerProgress.png"
-                alt="tarjeta debito mastercard"
-              />
-            )}
-          </Col>
-        </Columns>
+              <div className="mc-goal-card__body mc-goal-card__body--second">
+                <p className="mc-goal-card__description">Compra en diferentes categorías para completar tu meta.</p>
+                <div className="mc-goal-card__categories">
+                  <p>
+                    <strong>Llevas</strong> <span className="highlight">{context && context.tracing && context.tracing.categories ? context.tracing.categories.split(',').length : 0}</span> <strong>categorías de</strong> <span className="highlight">{context && context.user ? context.user[`goal_category_1`] : 0}</span>
+                  </p>
+                </div>
+                <button className="mc-goal-card__btn">Conocer categorías<Icon name="arrow_white_down"/></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="major-award-page" style={{ marginTop: '30px' }}>
+          <InfoCatalog
+            dateText={context && context.tracing ? context.tracing.date_update : '19/05/2026'}
+            type={1}
+          />
+        </div>
 
         {/* Sección: Elige dónde comprar */}
         {context && (
@@ -201,11 +161,11 @@ function Progress() {
                   <h2 className="mc-goal-section__title">
                     {context && context.tracing && context.tracing.winner_1 == 1
                       ? 'Categorías completadas'
-                      : 'Conoce dónde comprar'}
+                      : 'Compra en estas categorías'}
                   </h2>
                   <div className="categories-goal-text">
                     <p>
-                      {context && context.tracing && context.tracing.winner_1 == 1 ? (
+                      {/*context && context.tracing && context.tracing.winner_1 == 1 ? (
                         <span className="goal-progress mc-goal-section__progress">
                           Cumpliste las compras en las categorías necesarias para alcanzar tu meta.
                         </span>
@@ -215,7 +175,7 @@ function Progress() {
                           categorías distintas para cumplir tu meta. <strong>Aún te faltan{' '}
                             {isNaN(restTrx) || restTrx < 0 ? 0 : restTrx}.</strong>
                         </span>
-                      )}
+                      )*/}
                     </p>
                   </div>
                 </div>
@@ -270,16 +230,13 @@ function Progress() {
         <div className="records-trophy-section">
           {width > 992 ? (
             <p>
-              Cada vez que llegues a tu meta, participas por un
-              <br /> premio especial. ¡Cumple los retos las veces que <br />
-              puedas!
+              Entre más veces cumplas tu meta de facturación, más 
+              <br /> te acercas al premio especial. 
             </p>
           ) : (
             <>
               <p>
-                Cada vez que llegues a tu meta, participas por un premio especial.
-                <br className="br-mobile" />
-                ¡Cumple los retos las veces que puedas!
+                Entre más veces cumplas tu meta de facturación, más te acercas al premio especial.
               </p>
             </>
           )}
@@ -343,10 +300,17 @@ function Progress() {
 
       <Container>
         <h1 style={{ fontWeight: 700 }}>
-          <span>Conoce tu meta</span> y sigue tu progreso
+          {context && context.tracing && context.tracing.winner_1 == 1 ?
+            <><span>¡Felicidades, cumpliste tu meta!</span></> :
+            <>Para ganar tu bono <span>debes cumplir 2 metas</span></>
+          }
         </h1>
 
-        {<div className='progress-minibanner'>
+        {context && context.tracing && context.tracing.winner_1 == 1 && (
+          <BannerRedeemed type={context.redemtions.length > 0 ? "redeemed" : 'winner'} />
+        )}
+
+        {/*<div className='progress-minibanner'>
           <div className='progress-minibanner__title'>
             <img src="assets/images/disclaimer2.svg"></img>
             <h3>La campaña finalizó</h3>
@@ -354,7 +318,7 @@ function Progress() {
           <p>
           Gracias por participar. ¡Nos vemos en la próxima!
           </p>
-        </div>}
+        </div>*/}
 
         <div className="mc-section-card">
           <Tabs

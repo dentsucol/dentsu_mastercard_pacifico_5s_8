@@ -32,7 +32,7 @@ function Awards() {
 
   return (
     <div className="mc-page awards inner slow_ani">
-      {/*
+      {
       <Container>
         <h1>
           Catálogo de <span>bonos</span>
@@ -46,12 +46,13 @@ function Awards() {
         )}
         <InfoCatalog
           dateText={context && context.tracing ? context.tracing.date_update : '14/05/2026'}
+          type={2}
         />
       </Container>
-      */}
+      }
 
       <Container>
-        {/*awards ? (
+        {awards ? (
           <AwardsGallery
             setAward_exhausted={setAward_exhausted}
             awardBoxType={2}
@@ -69,28 +70,28 @@ function Awards() {
           />
         ) : (
           <Preloader type="section" invert />
-        )*/}
+        )}
 
         <MajorAwardBanner context={context} from="/premios" />
       </Container>
-      {/* {
-  award_exhausted &&
-      <CustomModal
-        global
-        title="Bonos agotados"
-        desc="Ya no te quedan bonos para redimir, pero sigue pagando con tu Tarjeta Mastercard Débito del Pacífico."
-        cta="Aceptar"
-        icon={false}
-        primaryAction={
-          {
-            action: setAward_exhausted,
-            buttonText: 'Cerrar',
-            loading: false
-          }
-        }
-        show={award_exhausted} setShowModal={setAward_exhausted}
-      />
-} */}
+      {
+        award_exhausted &&
+            <CustomModal
+              global
+              title="Bonos agotados"
+              desc="Ya no te quedan bonos para redimir, pero sigue pagando con tu Tarjeta Mastercard Débito del Pacífico."
+              cta="Aceptar"
+              icon={false}
+              primaryAction={
+                {
+                  action: setAward_exhausted,
+                  buttonText: 'Cerrar',
+                  loading: false
+                }
+              }
+              show={award_exhausted} setShowModal={setAward_exhausted}
+            />
+      }
     </div>
   )
 }

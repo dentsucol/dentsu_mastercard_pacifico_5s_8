@@ -141,7 +141,7 @@ function AwardBox({
                       Agotado
                     </div>
                   ) : (
-                    <div className="mc-awards-container__items--item__inventory">
+                    <div className={`mc-awards-container__items--item__inventory ${inventory < 50 ? 'orange_alert' : 'green_alert'}`}>
                       {inventory >= 50 ? 'Más de 50 disponibles' : `${inventory} disponibles`}
                     </div>
                   )}
