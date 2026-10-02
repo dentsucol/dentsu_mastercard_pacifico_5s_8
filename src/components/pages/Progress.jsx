@@ -88,7 +88,7 @@ function Progress() {
             {/* Primera Meta: Facturación */}
             <div className="mc-goal-card">
               <div className="mc-goal-card__header">
-                <h3>Primera meta: facturación</h3>
+                <h3>Meta de facturación</h3>
               </div>
               <div className="mc-goal-card__body">
                 <div className="mc-goal-card__amount">
@@ -113,7 +113,7 @@ function Progress() {
             {/* Segunda Meta: Categorías */}
             <div className="mc-goal-card">
               <div className="mc-goal-card__header">
-                <h3>Segunda meta: categorías</h3>
+                <h3>Meta de categorías</h3>
               </div>
               <div className="mc-goal-card__body mc-goal-card__body--second">
                 <p className="mc-goal-card__description">Compra en diferentes categorías para completar tu meta.</p>
