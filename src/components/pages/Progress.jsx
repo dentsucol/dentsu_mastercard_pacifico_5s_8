@@ -161,7 +161,7 @@ function Progress() {
                   <h2 className="mc-goal-section__title">
                     {context && context.tracing && context.tracing.winner_1 == 1
                       ? 'Categorías completadas'
-                      : 'Compra en estas categorías'}
+                      : 'Compra en cualquiera de estas categorías'}
                   </h2>
                   <div className="categories-goal-text">
                     <p>

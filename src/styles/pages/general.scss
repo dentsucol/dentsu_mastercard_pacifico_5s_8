@@ -583,7 +583,9 @@
     font-family: 'Accord Alternate';
 
     @media only screen and (max-width: 992px) {
-      text-align: left;
+      text-align: center;
+      max-width: 80%;
+      margin: auto;
     }
   }
 
