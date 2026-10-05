@@ -41,7 +41,6 @@ function AwardBox({
 
   const handlerModal = () => {
     if (!download) {
-      console.log('Interes de bono')
       sendDataLayer({
         datalayer: {
           event: 'bond_interest',
@@ -54,7 +53,6 @@ function AwardBox({
     }
 
     if (download && !downloadLoading) {
-      console.log('Redencion:', award)
       setDownloadLoading(true)
 
       doloadRedeem(award.id, token)
@@ -99,8 +97,6 @@ function AwardBox({
       }
     }
   }
-
-  console.log('Award info', inventory, award)
 
   return (
     <div className="mc-awards-container__items--item__container">

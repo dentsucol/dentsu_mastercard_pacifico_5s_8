@@ -48,7 +48,6 @@ function Tabs({ sections }) {
       </div>
       <div className={`mc-tabs-container--content`}>
         {sections.map((section, index) => {
-          console.log('Section:', section)
           return (
             <div key={index} className={`mc-tabs-container--content__body`}>
               {section.content}

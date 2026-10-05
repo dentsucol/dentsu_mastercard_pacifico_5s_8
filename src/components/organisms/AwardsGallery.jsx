@@ -40,7 +40,6 @@ function AwardsGallery({
         Object.keys(context.awards).map((key) => context.awards[key])
       )
     }
-    console.log('context',context);
   }, [context.awards])
 
   useEffect(() => {
@@ -145,14 +144,11 @@ function AwardsGallery({
                       className={`slide-group ${isMobile ? "vertical-group" : "grid-group"}`}
                     >
                       {group.map((item, index) => {
-                        console.log("item award", item)
                         let inventory = false
                         if (download && item.prepurchased === 1) item.prepurchased = true
                         if (download && item.prepurchased === 0) item.prepurchased = false
                         const contextQuantity = context?.prepurchasedAwards?.find((preItem) => preItem.id_award == item.id)
-                        console.log("contextQuantity", contextQuantity)
                         if (contextQuantity && contextQuantity.total) inventory = contextQuantity.total
-                        console.log("item award", item.id, inventory)
                         return (
                           <div
                             key={index}

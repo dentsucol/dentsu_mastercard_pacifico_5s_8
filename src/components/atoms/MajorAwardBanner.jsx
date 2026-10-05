@@ -11,7 +11,7 @@ function MajorAwardBanner({
   const { width } = useWidth()
   const goBondDatalayer = (e) => {
     sendDataLayer({datalayer: {
-      event: 'go_bond',
+      event: 'jackpot',
       text: 'Quiero el premio mayor',
       site_url: from,
       link: '/premio-mayor'

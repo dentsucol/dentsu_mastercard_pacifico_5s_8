@@ -7,6 +7,7 @@ import TestQuestions from '../organisms/TestQuestions'
 import MajorAwardBanner from '../atoms/MajorAwardBanner'
 import CustomModal from '../molecules/CustomModal'
 import { getDateNow } from '../../utils/functions'
+import { sendDataLayer } from '../../utils/functions'
 
 function Mechanic() {
   const { context } = useContext(StateController)
@@ -23,6 +24,13 @@ function Mechanic() {
       setPushModalSupermarket(true)
     }
   }, [context.tracing])
+
+  const HandleEvent = () => {
+    sendDataLayer({
+      datalayer: { event: 'mechanics_btn', text: "Consulta tu progreso", link: '/mecanica' },
+      repeat: true
+    })
+  }
 
   return (
     <div className="mc-page mechanic inner slow_ani">
@@ -77,7 +85,7 @@ function Mechanic() {
 
         <div>
           <a className="button_progress_link" href="/progreso" data-gtm-event="mechanics_btn">
-            <button className="standard_buttom_primary">Consulta tu progreso</button>
+            <button className="standard_buttom_primary" onClick={HandleEvent}>Consulta tu progreso</button>
           </a>
         </div>
 

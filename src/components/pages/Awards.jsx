@@ -28,8 +28,6 @@ function Awards() {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }, [])
 
-  console.log('award_exhausted', award_exhausted)
-
   return (
     <div className="mc-page awards inner slow_ani">
       {

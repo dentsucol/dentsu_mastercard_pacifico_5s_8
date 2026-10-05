@@ -214,7 +214,7 @@ function Progress() {
                     <div className="mc-section-card--copy">
                       <strong>Una vez que cumplas tu meta podrás canjear tu premio</strong>
                     </div>
-                    <a href="/premios">Consulta el catálogo de bonos</a>
+                    <a href="/premios" onClick={sendDataWinner("Consulta el catálogo de bonos")}>Consulta el catálogo de bonos</a>
                   </div>
                 )}
             </>
