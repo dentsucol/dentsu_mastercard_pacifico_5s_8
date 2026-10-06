@@ -39,28 +39,11 @@ function Progress() {
     {
       id: 1,
       title: '¿En qué consiste la meta personal?',
-      content: `Es una meta asignada a cada participante por tarjeta, definida por Mastercard y Banco del Pacífico S.A. con base en el comportamiento transaccional previo al inicio de la campaña. Cada participante recibirá su meta a través de correo electrónico, SMS o WhatsApp una vez iniciada la campaña y durante su vigencia. Esta información será enviada directamente, por lo que no podrá ser consultada en otro medio.
-      <br/><br/>
-
-      <strong>La meta personal está compuesta por:</strong>
-      <ul>
-        <li>Monto mínimo de facturación.</li>
-        <li>Cantidad mínima de categorías de comercios en los que el participante debe hacer compras.</li>
-      </ul>
-
-      <br/>
-      El cumplimiento de la meta se da únicamente cuando se cumplen ambas condiciones.
-      <br/><br/>
-
-      <strong>Ejemplo:</strong>
-      <br/><br/>
-
-      Tu meta es:<br/>
-      Facturar USD $100<br/>
-      En 3 categorías de comercios como mínimo.
-      <br/><br/>
-
-      En este caso, el participante deberá realizar compras que en total sumen como valor mínimo $100 = meta personaly las compras deberán ser en 3 establecimientos o más Las compras deberán ser en 3 establecimientos o más. El cumplimiento de la meta se da únicamente con el cumplimiento de las dos condiciones; si el cliente logra solamente una de ellas, se dará por entendido que NO está cumpliendo su meta.`
+      content: `Es un reto asignado por cada tarjeta, definido por Mastercard y Banco del Pacífico S.A. con base en el 
+                comportamiento transaccional previo. Incluye dos condiciones: alcanzar un monto de facturación y comprar 
+                en una cantidad mínima de categorías de comercios. Para ser ganador, es necesario cumplir ambas 
+                condiciones. Cada participante podrá consultar su meta y progreso a través de la plataforma de campaña: 
+                www.pacificoestaentodas.bancodelpacifico.com.`
     },
     {
       id: 2,
