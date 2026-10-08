@@ -47,7 +47,7 @@ function MajorAward() {
 
   return (
     <div className="mc-page major-award inner slow_ani">
-      <div className="mc-major-award-t1">
+      {/*<div className="mc-major-award-t1">
         <Container>
           <div className="mc-major-award-window">
             <div
@@ -111,7 +111,7 @@ function MajorAward() {
             )}
           </div>
         </Container>
-      </div>
+      </div>*/}
 
       {viewTextMajorAward && (
         <div className="mc-major-award-t2">

@@ -18,6 +18,12 @@ function MajorAwardBanner({
     },repeat: true})
   }
 
+  if (!context || context) {
+    return (
+      <></>
+    )
+  }
+
   return (
     <div className={`mc-major-award-banner`}>
       {context &&
