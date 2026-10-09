@@ -48,8 +48,8 @@ function Login({ autologin, hash, setGlobalLoader }) {
               {
                 id: 1,
                 image: 'mechanic_slide_1.png',
-                title: 'Ingresa desde el enlace enviado desde Banco del Pacífico a tu <span>WhatsApp o correo.</span>',
-                titleDesktop: 'Ingresa desde el enlace enviado desde Banco del Pacífico a tu <span>WhatsApp o correo. </span>'
+                title: 'Ingresa desde el enlace enviado por Banco del Pacífico a tu <span>WhatsApp o correo.</span>',
+                titleDesktop: 'Ingresa desde el enlace enviado por Banco del Pacífico a tu <span>WhatsApp o correo. </span>'
               },
               {
                 id: 2,
