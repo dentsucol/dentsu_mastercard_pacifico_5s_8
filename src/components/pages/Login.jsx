@@ -19,7 +19,7 @@ function Login({ autologin, hash, setGlobalLoader }) {
             fields={[
               {
                 field: 'onlyText',
-                text: '<strong class="first_label">Para ingresar, abre el enlace que enviamos a tu correo o que recibiste por WhatsApp</strong>'
+                text: '<strong class="first_label">Ingresa desde el enlace enviado por Banco del Pacifico a tu correo o WhatsApp</strong>'
               },
               {
                 field: 'onlyText',
