@@ -1,0 +1,108 @@
+.mc-special-prize-section {
+  padding: 80px 124px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 970px;
+  }
+
+  &__image {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 490px;
+    height: 368px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #eee;
+    border: 4px solid #eee;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+  }
+
+  &__title {
+    font-family: 'Accord Alternate';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0;
+    color: #152343;
+    margin: 0;
+    word-break: break-word;
+  }
+
+  &__description {
+    font-family: 'Accord Alternate';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0;
+    color: #152343;
+    margin: 0;
+    word-break: break-word;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 1024px) {
+  .mc-special-prize-section {
+    padding: 40px 60px;
+
+    &__image {
+      width: 350px;
+      height: 260px;
+    }
+
+    &__title,
+    &__description {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mc-special-prize-section {
+    padding: 40px 24px 70px;
+
+    &__content {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      min-height: 200px;
+      order: 2;
+    }
+
+    &__title,
+    &__description {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}

@@ -4,6 +4,10 @@ import { StateController } from './../../App'
 import useWidth from '../../hooks/useWidth'
 import Container from '../../layouts/Container/Container'
 import { sendDataLayer } from '../../utils/functions'
+import CommerceBanner from '../molecules/CommerceBanner'
+import SpecialPrizeSection from '../molecules/SpecialPrizeSection'
+import FaqsFeed from '../organisms/FaqsFeed'
+
 
 function MajorAward() {
   const { context } = useContext(StateController)
@@ -45,74 +49,54 @@ function MajorAward() {
     )
   }
 
+  const listFaqs = [
+    {
+      title: '¿Cómo ganar? ',
+      content: '<p>Para ser elegible como ganador, el participante debe cumplir con los siguientes requisitos:</p><ol><li>Ingresar a esta plataforma con el código único de acceso.</li><li>Haber canjeado un bono una vez cumplido su primera meta.</li></ol><ul><li><strong>Premios:</strong> Cuatro (4) ganadores de un (1) premio que el participante podrá escoger entre una de las siguientes opciones: Audífonos Apple o Bose o Bono por US$500 de Amazon o Tipti. Los cuales se entregarán de la siguiente forma: Un (1) premio al cliente que mayor número de veces haya alcanzado su meta al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio. Tres (3) premios a los clientes que acumulen el mayor valor en facturación al finalizar la vigencia de la campaña, que hayan ingresado a la página web de la campaña, hayan hecho login (registro y acceso) y que hayan canjeado un premio.</li></ul>'
+    }
+  ];
+
+  const dataGroup = [
+    {
+      title: 'Audífonos o US$500 ¡Tu premio te espera!',
+      description: 'Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte unos audífonos Apple o Bose, o un bono Amazon o Tipti por US$500.',
+      image: "majorAward-1"
+    },
+    {
+      title: '¡Prepárate! Tu premio puede ser un celular o US$1,000',
+      description: 'Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte un iPhone 18 o Samsung S26 Ultra, o un bono Amazon o Tipti por US$1,000.',
+      image: "majorAward-2"
+    },
+    {
+      title: 'Empaca maletas o llévate US$1,500',
+      description: 'Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte un viaje a Machu Picchu para 2 personas, o un bono Amazon o Tipti por US$1,500.',
+      image: "majorAward-3"
+    },
+    {
+      title: 'Vive Rio o llévate US$3,000',
+      description: 'Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte un viaje a Rio de Janeiro para 2 personas, o un bono Amazon o Tipti por US$3,000.',
+      image: "majorAward-4"
+    }
+  ];
+
   return (
     <div className="mc-page major-award inner slow_ani">
-      
-      {/*<div className="mc-major-award-t1">
+      {context &&
+        <CommerceBanner group={dataGroup(context.user.segment.replace('Grupo ', ''))} />
+      }
+
+      <SpecialPrizeSection />
+
+
+      <div className='mc-page faqs_majorAward inner slow_ani'>
         <Container>
-          <div className="mc-major-award-window">
-            <div
-              className={`mc-major-award-t1-left layout-${context?.user?.segment.replace('Grupo ', '')}`}
-            >
-              <div></div>
-              <div>
-                {context && context.user.segment === 'Grupo 1' && (
-                  <>
-                    <p>
-                      Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás
-                      llevarte
-                      <span> un bono de Amazon o Megamaxi por US$ 500.</span>
-                    </p>
-                  </>
-                )}
-
-                {context && context.user.segment === 'Grupo 2' && (
-                  <>
-                    <p>
-                      Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás
-                      llevarte
-                      <span> un bono de Amazon o Megamaxi por US$ 1.000.</span>
-                    </p>
-                  </>
-                )}
-
-                {context && context.user.segment === 'Grupo 3' && (
-                  <>
-                    <p>
-                      Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás
-                      llevarte
-                      <span> un bono de Amazon o Megamaxi por US$ 1.500.</span>
-                    </p>
-                  </>
-                )}
-
-                {context && context.user.segment === 'Grupo 4' && (
-                  <>
-                    <p>
-                      Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás
-                      ganar:
-                      <span>
-                        {' '}
-                        un bono de Amazon o Megamaxi por US$ 3.000 o un crucero Royal Caribbean para
-                        4 personas.
-                      </span>
-                    </p>
-                  </>
-                )}
-              </div>
-            </div>
-            {context && (
-              <div
-                className={`mc-major-award-t1-right group-${context.user.segment.replace('Grupo ', '')}`}
-              >
-                <img
-                  src={`/assets/images/majorAward-${parseInt(context.user.segment.replace('Grupo ', ''))}.png`}
-                />
-              </div>
-            )}
-          </div>
+          <h1>Conoce más detalles</h1>
+          <FaqsFeed
+            faqsType={2}
+            list={listFaqs}
+          />
         </Container>
-      </div>*/}
+      </div>
 
       {viewTextMajorAward && (
         <div className="mc-major-award-t2">
