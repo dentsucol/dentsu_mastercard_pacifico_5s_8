@@ -19,26 +19,13 @@ function Login({ autologin, hash, setGlobalLoader }) {
             fields={[
               {
                 field: 'onlyText',
-                text: '<strong class="first_label">Escribe el código que recibiste por WhatsApp o abre el enlace que enviamos a tu correo</strong>'
-              },
-              {
-                field: 'code',
-                placeholder: 'XHL123...',
-                maxlength: 8,
-                separated: false
+                text: '<strong class="first_label">Para ingresar, abre el enlace que enviamos a tu correo o que recibiste por WhatsApp</strong>'
               },
               {
                 field: 'onlyText',
                 text: '<strong>¿No ves el enlace?</strong> Revisa tu bandeja de entrada o la carpeta de spam.'
               },
-              {
-                field: 'terms',
-                label: 'He leído y acepto los',
-                termsText: 'términos y condiciones',
-                termsLink: '/terminos-y-condiciones'
-              } // DO NOT CHANGE THIS LINE
             ]}
-            buttonText="Ingresar"
             background="#fff"
             autologin={autologin}
             hash={hash}
@@ -61,8 +48,8 @@ function Login({ autologin, hash, setGlobalLoader }) {
               {
                 id: 1,
                 image: 'mechanic_slide_1.png',
-                title: 'Encuentra el código enviado desde Banco Pacífico a tu <span>WhatsApp</span> o ingresa desde el enlace <span>enviado a tu correo</span>',
-                titleDesktop: 'Regístrate con el código<span>que te enviamos por correo.</span>'
+                title: 'Ingresa desde el enlace enviado desde Banco del Pacífico a tu <span>WhatsApp o correo.</span>',
+                titleDesktop: 'Ingresa desde el enlace enviado desde Banco del Pacífico a tu <span>WhatsApp o correo. </span>'
               },
               {
                 id: 2,

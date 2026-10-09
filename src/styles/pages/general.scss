@@ -68,10 +68,13 @@
     0 23px 14px 0 rgba(124, 192, 253, 0.05),
     0 10px 10px 0 rgba(124, 192, 253, 0.09),
     0 3px 6px 0 rgba(124, 192, 253, 0.1);
+  height: 310px;
 
   @media only screen and (max-width: 992px) {
     margin-left: 12px;
     margin-right: 12px;
+    height: 174px;
+
   }
 
   .mc-button-container {
@@ -255,7 +258,6 @@
     overflow: hidden;
   }
   @media only screen and (min-width: 992px) {
-    height: 450px;
     position: relative;
     margin-top: 30px;
     margin-bottom: 50px;
@@ -269,7 +271,8 @@
       width: 482px;
       z-index: 2;
       border-radius: var(--xl, 24px) !important;
-      height: 458px;
+      top: 18%;
+      
 
       .mc-login {
         width: 348px;

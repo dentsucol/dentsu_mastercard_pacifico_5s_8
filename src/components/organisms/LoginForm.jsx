@@ -218,15 +218,18 @@ function LoginForm({
               )
             })}
           </div>
-          <Button
-            type="primary"
-            text={buttonText}
-            loading={isLoading}
-            disabled={!code}
-            status="active"
-            dataEvent="button_login"
-            onClick={handleLogin}
-          />
+          {buttonText &&
+            <Button
+              type="primary"
+              text={buttonText}
+              loading={isLoading}
+              disabled={!code}
+              status="active"
+              dataEvent="button_login"
+              onClick={handleLogin}
+            />
+          }
+          
         </div>
       </Container>
 
