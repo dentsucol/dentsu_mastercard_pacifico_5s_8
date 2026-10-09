@@ -14,7 +14,7 @@ function Login({ autologin, hash, setGlobalLoader }) {
         </h3>
         <div className="mc-section-login-form">
           <LoginForm
-            title="Comienza a ganar"
+            title="¡Comienza a ganar!"
             type="credentials"
             fields={[
               {
