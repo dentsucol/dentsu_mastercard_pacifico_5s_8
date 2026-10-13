@@ -1604,14 +1604,20 @@
   p {
     color: $primaryColorLight;
     text-align: center !important;
-    font-size: 20px !important;
+    font-size: 24px !important;
     font-style: normal !important;
     font-weight: 700 !important;
-    line-height: normal !important;
+    line-height: 26px !important;
+    margin-bottom: 12px !important;
 
     span {
       color: var(--Text-Accent, #002f87) !important;
       font-weight: 700px !important;
+      font-size: 32px !important;
+      max-width: 300px;
+      display: block;
+      margin-bottom: 14px;
+      line-height: 36px;
     }
 
     @media only screen and (min-width: 992px) {
@@ -1639,6 +1645,7 @@
     text-decoration: none;
     border-radius: 8px;
     background: var(--Button-Default, #002F87);
+    height: 44px;
 
     @media only screen and (min-width: 992px) {
       display: flex;

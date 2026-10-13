@@ -18,12 +18,6 @@ function MajorAwardBanner({
     },repeat: true})
   }
 
-  if (!context || context) {
-    return (
-      <></>
-    )
-  }
-
   return (
     <div className={`mc-major-award-banner`}>
       {context &&
@@ -34,41 +28,41 @@ function MajorAwardBanner({
         >
           <Col>
             {width < 992 ? 
-              <img src={`/assets/images/majorAward-mb-${context.user.segment.replace('Grupo ', '')}.png`} />
-            : <img src={`/assets/images/majorAward-${context.user.segment.replace('Grupo ', '')}.png`} />
+              <img src={`/assets/images/majorAward-${context.user.segment.replace('Grupo ', '')}.png`} />
+            : <img src={`/assets/images/majorAward-${context.user.segment.replace('Grupo ', '')}-lg.png`} />
             }
             
           </Col>
           <Col>
             <h2 className='mc-major-award-banner__title'>
-              {context && context.user.segment === 'Grupo 0' && 
-                <p>Usa para todo tu Tarjeta Mastercard Débito del Pacífico y podrás llevarte uno de los
-                  <span> 5 bonos de Amazon por US$ 100.</span>
-                </p>
-              }
               {context && context.user.segment === 'Grupo 1' && 
-                <p>Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte 
-                  <span> un bono de Amazon o Megamaxi por US$ 500.</span>
+                <p><span>¡Tus audífonos o tu bono están cada vez más cerca!</span>
+                  Con cada meta de facturación que cumplas, avanzas hacia unos audífonos Apple o Bose, o un bono Amazon o Tipti por US$500.
                 </p>
               }
               {context && context.user.segment === 'Grupo 2' && 
-                <>
-                  <p>Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte 
-                    <span> un bono de Amazon o Megamaxi por US$ 1.000.</span>
-                  </p>
-                </>
+                <p><span>¡Tu nuevo celular o tu bono están cada vez más cerca!</span>
+                  Con cada meta de facturación que cumplas, avanzas hacia un iPhone 18 o Samsung S26 Ultra, o un bono Amazon o Tipti por US$1,000.
+                </p>
               }
               {context && context.user.segment === 'Grupo 3' && 
                 <>
-                  <p>Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte 
-                    <span> un bono de Amazon o Megamaxi por US$ 1.500.</span>
+                  <p><span>Machu Picchu o US$1,500, tu premio te espera</span>
+                    Con cada meta de facturación que cumplas, avanzas hacia un viaje a Machu Picchu para 2, o un bono Amazon o Tipti por US$1,500.
                   </p>
                 </>
               }
               {context && context.user.segment === 'Grupo 4' && 
                 <>
-                  <p>Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás ganar:
-                    <span> un bono de Amazon o Megamaxi por US$ 3.000 o un crucero Royal Caribbean para 4 personas.</span>
+                  <p><span>Rio de Janeiro o US$3,000, tu premio te espera</span>
+                    Con cada meta de facturación que cumplas, avanzas hacia un viaje a Rio de Janeiro para 2, o un bono Amazon o Tipti por US$3,000.
+                  </p>
+                </>
+              }
+              {context && context.user.segment === 'Grupo 0' && 
+                <>
+                  <p><span>¡Tus audífonos o tu bono están cada vez más cerca!</span>
+                    Con cada meta de facturación que cumplas, avanzas hacia unos audífonos Apple o Bose, o un bono Amazon o Tipti por US$500.
                   </p>
                 </>
               }
