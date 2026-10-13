@@ -1,19 +1,19 @@
 import React from 'react'
 
-function CommerceBanner(grupo) {
+function CommerceBanner({group}) {
   return (
     <div className="mc-commerce-banner">
       <div className="mc-commerce-banner__content">
         <div className="mc-commerce-banner__text">
           <h3 className="mc-commerce-banner__title">
-            {grupo.title}
+            {group.title}
           </h3>
           <p className="mc-commerce-banner__description">
-            {grupo.description}
+            {group.description}
           </p>
         </div>
         <div className="mc-commerce-banner__image">
-          <img src={`/assets/images/${grupo.image}.png`} />
+          <img src={`/assets/images/${group.image}.png`} />
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useEffect, useContext, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { StateController } from './../../App'
 import useWidth from '../../hooks/useWidth'
@@ -7,7 +7,8 @@ import { sendDataLayer } from '../../utils/functions'
 import CommerceBanner from '../molecules/CommerceBanner'
 import SpecialPrizeSection from '../molecules/SpecialPrizeSection'
 import FaqsFeed from '../organisms/FaqsFeed'
-
+import SectionCards from '../molecules/SectionCards';
+import { DESTINATIONS } from '../../constants/majorAward';
 
 function MajorAward() {
   const { context } = useContext(StateController)
@@ -18,6 +19,11 @@ function MajorAward() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }, [])
+
+  const idgroup = useMemo(() => {
+    if (!context?.user?.segment) return null;
+    return parseInt(context.user.segment.replace('Grupo ', ''));
+  }, [context?.user?.segment])
 
   const dataLayerTyc = (e) => {
     e.preventDefault()
@@ -51,9 +57,24 @@ function MajorAward() {
 
   const listFaqs = [
     {
-      title: '¿Cómo ganar? ',
-      content: '<p>Para ser elegible como ganador, el participante debe cumplir con los siguientes requisitos:</p><ol><li>Ingresar a esta plataforma con el código único de acceso.</li><li>Haber canjeado un bono una vez cumplido su primera meta.</li></ol><ul><li><strong>Premios:</strong> Cuatro (4) ganadores de un (1) premio que el participante podrá escoger entre una de las siguientes opciones: Audífonos Apple o Bose o Bono por US$500 de Amazon o Tipti. Los cuales se entregarán de la siguiente forma: Un (1) premio al cliente que mayor número de veces haya alcanzado su meta al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio. Tres (3) premios a los clientes que acumulen el mayor valor en facturación al finalizar la vigencia de la campaña, que hayan ingresado a la página web de la campaña, hayan hecho login (registro y acceso) y que hayan canjeado un premio.</li></ul>'
-    }
+      title: '¿Cómo ganar?',
+      content: '<p>Para ser elegible como ganador, el participante debe cumplir con los siguientes requisitos:</p><ol><li>Ingresar a esta plataforma con el código único de acceso.</li><li>Haber canjeado un bono una vez cumplido su primera meta.</li></ol><ul><li><strong>Premios:</strong>Cuatro (4) ganadores de un (1) premio que el participante podrá escoger entre una de las siguientes opciones: Audífonos Apple o Bose o Bono por US$500 de Amazon o Tipti. Los cuales se entregarán de la siguiente forma: Un (1) premio al cliente que mayor número de veces haya alcanzado su meta al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio. Tres (3) premios a los clientes que acumulen el mayor valor en facturación al finalizar la vigencia de la campaña, que hayan ingresado a la página web de la campaña, hayan hecho login (registro y acceso) y que hayan canjeado un premio.</li></ul>'
+    },
+    
+    {
+      title: '¿Cómo ganar?',
+      content: '<p>Para ser elegible como ganador, el participante debe cumplir con los siguientes requisitos:</p><ol><li>Ingresar a esta plataforma con el código único de acceso.</li><li>Haber canjeado un bono una vez cumplido su primera meta.</li></ol><ul><li><strong>Premios:</strong>Dos (2) ganadores de un (1) premio que el participante podrá escoger entre una de las siguientes opciones: iPhone 18 o Samsung S26 Ultra, o Bono por US$1,000 de Amazon o Tipti. Los cuales se entregarán de la siguiente forma: Un (1) premio al cliente que mayor número de veces haya alcanzado su meta al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio. Un (1) premio al cliente que acumule el mayor valor en facturación al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio.</li></ul>'
+    },
+    {
+      title: '¿Cómo ganar?',
+      content: '<p>Para ser elegible como ganador, el participante debe cumplir con los siguientes requisitos:</p><ol><li>Ingresar a esta plataforma con el código único de acceso.</li><li>Haber canjeado un bono una vez cumplido su primera meta.</li></ol><ul><li><strong>Premios:</strong>Dos (2) ganadores de un (1) premio que el participante podrá escoger entre una de las siguientes opciones: Viaje a Machu Picchu para 2 personas, o Bono por US$1,500 de Amazon o Tipti. Los cuales se entregarán de la siguiente forma: Un (1) premio al cliente que mayor número de veces haya alcanzado su meta al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio. Un (1) premio al cliente que acumule el mayor valor en facturación al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio.</li></ul>'
+    },
+    {
+      title: '¿Cómo ganar?',
+      content: '<p>Para ser elegible como ganador, el participante debe cumplir con los siguientes requisitos:</p><ol><li>Ingresar a esta plataforma con el código único de acceso.</li><li>Haber canjeado un bono una vez cumplido su primera meta.</li></ol><ul><li><strong>Premios:</strong>Dos (2) ganadores de un (1) premio que el participante podrá escoger entre una de las siguientes opciones: Viaje a Rio de Janeiro para 2 personas, o Bono por US$3,000 de Amazon o Tipti. Los cuales se entregarán de la siguiente forma: Un (1) premio al cliente que mayor número de veces haya alcanzado su meta al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio. Un (1) premio al cliente que acumule el mayor valor en facturación al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio.</li></ul>'
+    },
+
+
   ];
 
   const dataGroup = [
@@ -79,24 +100,61 @@ function MajorAward() {
     }
   ];
 
+  const dataSpecialGroup = [
+    {
+      title: 'Enamórate de tu premio especial y descubre cómo llevártelo.',
+      description: '¿Ya cumpliste tu meta? ¡Rápido! Podrías ser uno de los ganadores.',
+      image: "premio-especial_1"
+    },
+    {
+      title: 'Enamórate de tu premio especial y descubre cómo llevártelo.',
+      description: '¿Ya cumpliste tu meta? ¡Rápido! Podrías ser uno de los ganadores.',
+      image: "premio-especial_2"
+    }
+  ];
+
+  const activeDestination = useMemo(() => {
+    if (!idgroup) return null;
+    const groupNum = parseInt(idgroup);
+    if (groupNum >= 3) {
+      console.log(DESTINATIONS[groupNum - 3]);
+
+      return DESTINATIONS[groupNum - 3];
+    }
+    return DESTINATIONS[groupNum];
+  }, [idgroup]);
+
   return (
     <div className="mc-page major-award inner slow_ani">
       {context &&
-        <CommerceBanner group={dataGroup(context.user.segment.replace('Grupo ', ''))} />
+        <CommerceBanner group={dataGroup[idgroup - 1]} />
       }
 
-      <SpecialPrizeSection />
+      {context && (idgroup == "1" || idgroup == "2") &&
+        <SpecialPrizeSection group={dataSpecialGroup[idgroup - 1]} />
+      }
 
+      {context && (idgroup == "3" || idgroup == "4") &&
+        <SectionCards
+          from="/premio-mayor"
+          showGoalCounter
+          context={context}
+          items={activeDestination.items}
+        />
+      }
+     
 
-      <div className='mc-page faqs_majorAward inner slow_ani'>
-        <Container>
-          <h1>Conoce más detalles</h1>
-          <FaqsFeed
-            faqsType={2}
-            list={listFaqs}
-          />
-        </Container>
-      </div>
+      {context && 
+        <div className='mc-page faqs_majorAward inner slow_ani'>
+          <Container>
+            <h1>Conoce más detalles</h1>
+            <FaqsFeed
+              faqsType={2}
+              list={idgroup ? [listFaqs[parseInt(idgroup) - 1]] : []}
+            />
+          </Container>
+        </div>
+      }
 
       {viewTextMajorAward && (
         <div className="mc-major-award-t2">
