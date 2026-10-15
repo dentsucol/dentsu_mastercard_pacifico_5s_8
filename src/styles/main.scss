@@ -30,6 +30,12 @@
 @import "./components/microBanner";
 @import "./components/preheader";
 @import "./components/infoCatalog";
+@import "./components/sectionCards";
+
+// Molecules
+@import "./molecules/bannerRedeemed";
+@import "./molecules/commerceBanner";
+@import "./molecules/specialPrizeSection";
 
 // Layout
 @import "./layout/container";

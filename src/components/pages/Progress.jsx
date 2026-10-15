@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { StateController } from './../../App'
+import { Link } from "react-router-dom"
 
 import Container from '../../layouts/Container/Container'
 import ProgressBar from '../atoms/ProgressBar'
@@ -15,6 +16,7 @@ import FaqsFeed from '../organisms/FaqsFeed'
 import Icon from '../atoms/Icon'
 import BannerRedeemed from '../molecules/BannerRedeemed'
 
+
 function Progress() {
   const { context } = useContext(StateController)
   const { width } = useWidth()
@@ -24,7 +26,9 @@ function Progress() {
       ? context.user[`goal_category_1`] - context.tracing?.categories?.split(',').length
       : context?.user?.[`goal_category_1`]
 
-  const sendDataWinner = (textElement) => {
+  const sendDataEvent = (textElement) => {
+    console.log("textElement",textElement)
+    
     sendDataLayer({
       datalayer: { event: 'progress', text: textElement, link: '/premios' },
       repeat: true
@@ -77,7 +81,7 @@ function Progress() {
                 <div className="mc-goal-card__amount">
                   US{getPrice(context ? context.user[`goal_amount_1`] : 0)}
                 </div>
-                <p className="mc-goal-card__label">Asi va tu progreso</p>
+                <p className="mc-goal-card__label">Así va tu progreso</p>
                 <div className="mc-goal-card__progress">
                   <p>Llevas: US{getPrice(context && context.tracing ? context.tracing[`amount_1`] : 0)}</p>
                   <div className="mc-tabs-container--content__body--progress">
@@ -105,7 +109,9 @@ function Progress() {
                     <strong>Llevas</strong> <span className="highlight">{context && context.tracing && context.tracing.categories ? context.tracing.categories.split(',').length : 0}</span> <strong>categorías de</strong> <span className="highlight">{context && context.user ? context.user[`goal_category_1`] : 0}</span>
                   </p>
                 </div>
-                <button className="mc-goal-card__btn">Conocer categorías<Icon name="arrow_white_down"/></button>
+                <a href="#categories-goal">
+                  <button className="mc-goal-card__btn">Conocer categorías<Icon name="arrow_white_down"/></button>
+                </a>
               </div>
             </div>
           </div>
@@ -140,7 +146,7 @@ function Progress() {
               </div>
             </div> */}
             <>
-                <div className="mc-goal-section">
+                <div id="categories-goal" className="mc-goal-section">
                   <h2 className="mc-goal-section__title">
                     {context && context.tracing && context.tracing.winner_1 == 1
                       ? 'Categorías completadas'
@@ -192,12 +198,18 @@ function Progress() {
                 </div>
                 <div className="shadow-bottom"></div>
 
-                {context && context.tracing && context.tracing.winner_1 == 0 && (
+                {context && (
                   <div className="first-progress-content">
                     <div className="mc-section-card--copy">
-                      <strong>Una vez que cumplas tu meta podrás canjear tu premio</strong>
+                      {context.tracing && context.tracing.winner_1 == 1 ? (
+                        <strong>¡Ya cumpliste tu meta!</strong>
+                      ): (
+                        <strong>Una vez que cumplas tu meta podrás canjear tu premio</strong>
+                      )}
                     </div>
-                    <a href="/premios" onClick={sendDataWinner("Consulta el catálogo de bonos")}>Consulta el catálogo de bonos</a>
+                    <Link to="/premios" className="mc-banner-redeemed__btn" onClick={(e) => sendDataEvent("Consulta el catálogo de bonos")}>
+                      Consulta el catálogo de bonos
+                    </Link>
                   </div>
                 )}
             </>

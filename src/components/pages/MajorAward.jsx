@@ -1,9 +1,14 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useEffect, useContext, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { StateController } from './../../App'
 import useWidth from '../../hooks/useWidth'
 import Container from '../../layouts/Container/Container'
 import { sendDataLayer } from '../../utils/functions'
+import CommerceBanner from '../molecules/CommerceBanner'
+import SpecialPrizeSection from '../molecules/SpecialPrizeSection'
+import FaqsFeed from '../organisms/FaqsFeed'
+import SectionCards from '../molecules/SectionCards';
+import { DESTINATIONS } from '../../constants/majorAward';
 
 function MajorAward() {
   const { context } = useContext(StateController)
@@ -14,6 +19,11 @@ function MajorAward() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }, [])
+
+  const idgroup = useMemo(() => {
+    if (!context?.user?.segment) return null;
+    return parseInt(context.user.segment.replace('Grupo ', ''));
+  }, [context?.user?.segment])
 
   const dataLayerTyc = (e) => {
     e.preventDefault()
@@ -45,74 +55,106 @@ function MajorAward() {
     )
   }
 
+  const listFaqs = [
+    {
+      title: '¿Cómo ganar?',
+      content: '<p>Para ser elegible como ganador, el participante debe cumplir con los siguientes requisitos:</p><ol><li>Ingresar a esta plataforma con el código único de acceso.</li><li>Haber canjeado un bono una vez cumplido su primera meta.</li></ol><ul><li><strong>Premios:</strong>Cuatro (4) ganadores de un (1) premio que el participante podrá escoger entre una de las siguientes opciones: Audífonos Apple o Bose o Bono por US$500 de Amazon o Tipti. Los cuales se entregarán de la siguiente forma: Un (1) premio al cliente que mayor número de veces haya alcanzado su meta al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio. Tres (3) premios a los clientes que acumulen el mayor valor en facturación al finalizar la vigencia de la campaña, que hayan ingresado a la página web de la campaña, hayan hecho login (registro y acceso) y que hayan canjeado un premio.</li></ul>'
+    },
+    
+    {
+      title: '¿Cómo ganar?',
+      content: '<p>Para ser elegible como ganador, el participante debe cumplir con los siguientes requisitos:</p><ol><li>Ingresar a esta plataforma con el código único de acceso.</li><li>Haber canjeado un bono una vez cumplido su primera meta.</li></ol><ul><li><strong>Premios:</strong>Dos (2) ganadores de un (1) premio que el participante podrá escoger entre una de las siguientes opciones: iPhone 18 o Samsung S26 Ultra, o Bono por US$1,000 de Amazon o Tipti. Los cuales se entregarán de la siguiente forma: Un (1) premio al cliente que mayor número de veces haya alcanzado su meta al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio. Un (1) premio al cliente que acumule el mayor valor en facturación al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio.</li></ul>'
+    },
+    {
+      title: '¿Cómo ganar?',
+      content: '<p>Para ser elegible como ganador, el participante debe cumplir con los siguientes requisitos:</p><ol><li>Ingresar a esta plataforma con el código único de acceso.</li><li>Haber canjeado un bono una vez cumplido su primera meta.</li></ol><ul><li><strong>Premios:</strong>Dos (2) ganadores de un (1) premio que el participante podrá escoger entre una de las siguientes opciones: Viaje a Machu Picchu para 2 personas, o Bono por US$1,500 de Amazon o Tipti. Los cuales se entregarán de la siguiente forma: Un (1) premio al cliente que mayor número de veces haya alcanzado su meta al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio. Un (1) premio al cliente que acumule el mayor valor en facturación al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio.</li></ul>'
+    },
+    {
+      title: '¿Cómo ganar?',
+      content: '<p>Para ser elegible como ganador, el participante debe cumplir con los siguientes requisitos:</p><ol><li>Ingresar a esta plataforma con el código único de acceso.</li><li>Haber canjeado un bono una vez cumplido su primera meta.</li></ol><ul><li><strong>Premios:</strong>Dos (2) ganadores de un (1) premio que el participante podrá escoger entre una de las siguientes opciones: Viaje a Rio de Janeiro para 2 personas, o Bono por US$3,000 de Amazon o Tipti. Los cuales se entregarán de la siguiente forma: Un (1) premio al cliente que mayor número de veces haya alcanzado su meta al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio. Un (1) premio al cliente que acumule el mayor valor en facturación al finalizar la vigencia de la campaña, que haya ingresado a la página web de la campaña, haya hecho login (registro y acceso) y que haya canjeado un premio.</li></ul>'
+    },
+
+
+  ];
+
+  const dataGroup = [
+    {
+      title: 'Audífonos o US$500<br/>¡Tu premio te espera!',
+      description: 'Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte unos audífonos Apple o Bose, o un bono Amazon o Tipti por US$500.',
+      image: "majorAward-1"
+    },
+    {
+      title: '¡Prepárate! Tu premio puede ser un celular o US$1,000',
+      description: 'Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte un iPhone 18 o Samsung S26 Ultra, o un bono Amazon o Tipti por US$1,000.',
+      image: "majorAward-2"
+    },
+    {
+      title: 'Empaca maletas o<br/>llévate US$1,500',
+      description: 'Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte un viaje a Machu Picchu para 2 personas, o un bono Amazon o Tipti por US$1,500.',
+      image: "majorAward-3"
+    },
+    {
+      title: 'Vive Rio o llévate US$3,000',
+      description: 'Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte un viaje a Rio de Janeiro para 2 personas, o un bono Amazon o Tipti por US$3,000.',
+      image: "majorAward-4"
+    }
+  ];
+
+  const dataSpecialGroup = [
+    {
+      title: 'Enamórate de tu premio especial y descubre cómo llevártelo.',
+      description: '¿Ya cumpliste tu meta? ¡Rápido! Podrías ser uno de los ganadores.',
+      image: "premio-especial_1"
+    },
+    {
+      title: 'Enamórate de tu premio especial y descubre cómo llevártelo.',
+      description: '¿Ya cumpliste tu meta? ¡Rápido! Podrías ser uno de los ganadores.',
+      image: "premio-especial_2"
+    }
+  ];
+
+  const activeDestination = useMemo(() => {
+    if (!idgroup) return null;
+    const groupNum = parseInt(idgroup);
+    if (groupNum >= 3) {
+      console.log(DESTINATIONS[groupNum - 3]);
+
+      return DESTINATIONS[groupNum - 3];
+    }
+    return DESTINATIONS[groupNum];
+  }, [idgroup]);
+
   return (
     <div className="mc-page major-award inner slow_ani">
-      
-      {/*<div className="mc-major-award-t1">
-        <Container>
-          <div className="mc-major-award-window">
-            <div
-              className={`mc-major-award-t1-left layout-${context?.user?.segment.replace('Grupo ', '')}`}
-            >
-              <div></div>
-              <div>
-                {context && context.user.segment === 'Grupo 1' && (
-                  <>
-                    <p>
-                      Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás
-                      llevarte
-                      <span> un bono de Amazon o Megamaxi por US$ 500.</span>
-                    </p>
-                  </>
-                )}
+      {context &&
+        <CommerceBanner group={dataGroup[idgroup - 1]} />
+      }
 
-                {context && context.user.segment === 'Grupo 2' && (
-                  <>
-                    <p>
-                      Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás
-                      llevarte
-                      <span> un bono de Amazon o Megamaxi por US$ 1.000.</span>
-                    </p>
-                  </>
-                )}
+      {context && (idgroup == "1" || idgroup == "2") &&
+        <SpecialPrizeSection group={dataSpecialGroup[idgroup - 1]} />
+      }
 
-                {context && context.user.segment === 'Grupo 3' && (
-                  <>
-                    <p>
-                      Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás
-                      llevarte
-                      <span> un bono de Amazon o Megamaxi por US$ 1.500.</span>
-                    </p>
-                  </>
-                )}
+      {context && (idgroup == "3" || idgroup == "4") &&
+        <SectionCards
+          from="/premio-mayor"
+          showGoalCounter
+          context={context}
+          items={activeDestination.items}
+        />
+      }
+     
 
-                {context && context.user.segment === 'Grupo 4' && (
-                  <>
-                    <p>
-                      Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás
-                      ganar:
-                      <span>
-                        {' '}
-                        un bono de Amazon o Megamaxi por US$ 3.000 o un crucero Royal Caribbean para
-                        4 personas.
-                      </span>
-                    </p>
-                  </>
-                )}
-              </div>
-            </div>
-            {context && (
-              <div
-                className={`mc-major-award-t1-right group-${context.user.segment.replace('Grupo ', '')}`}
-              >
-                <img
-                  src={`/assets/images/majorAward-${parseInt(context.user.segment.replace('Grupo ', ''))}.png`}
-                />
-              </div>
-            )}
-          </div>
-        </Container>
-      </div>*/}
+      {context && 
+        <div className='mc-page faqs_majorAward inner slow_ani'>
+          <Container>
+            <h1>Conoce más detalles</h1>
+            <FaqsFeed
+              faqsType={2}
+              list={idgroup ? [listFaqs[parseInt(idgroup) - 1]] : []}
+            />
+          </Container>
+        </div>
+      }
 
       {viewTextMajorAward && (
         <div className="mc-major-award-t2">

@@ -1424,6 +1424,25 @@
         }
       }
     }
+
+    .faqs_majorAward {
+      
+      h1 {
+        font-family: 'DIN Pro';
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 28px;
+        color: #002f87;
+        text-align: center;
+        margin: 0 0 24px 0;
+      }
+
+      @media (max-width: 992px) {
+        h1 {
+          margin: 40px auto 10px;
+        }
+      }
+    }
   }
 
   &.terms {
@@ -1585,14 +1604,20 @@
   p {
     color: $primaryColorLight;
     text-align: center !important;
-    font-size: 20px !important;
+    font-size: 24px !important;
     font-style: normal !important;
     font-weight: 700 !important;
-    line-height: normal !important;
+    line-height: 26px !important;
+    margin-bottom: 12px !important;
 
     span {
       color: var(--Text-Accent, #002f87) !important;
       font-weight: 700px !important;
+      font-size: 32px !important;
+      max-width: 300px;
+      display: block;
+      margin-bottom: 14px;
+      line-height: 36px;
     }
 
     @media only screen and (min-width: 992px) {
@@ -1620,6 +1645,11 @@
     text-decoration: none;
     border-radius: 8px;
     background: var(--Button-Default, #002F87);
+    height: 44px;
+
+    &:hover {
+      background: var(--Button-Hover, #081f2d);;
+    }
 
     @media only screen and (min-width: 992px) {
       display: flex;
@@ -1637,18 +1667,6 @@
       line-height: normal;
       text-decoration: none;
       margin: auto 32px;
-    }
-
-    &:hover {
-      @media only screen and (max-width: 992px) {
-        border: 1px solid var(--Outline-Low, #e0eefe);
-        background: var(--Background-Background-Medium, #b9dcfe);
-        transition: all 0.3s linear;
-        -webkit-transition: all 0.3s linear;
-        -moz-transition: all 0.3s linear;
-        -ms-transition: all 0.3s linear;
-        -o-transition: all 0.3s linear;
-      }
     }
   }
 }
@@ -1733,7 +1751,11 @@
     padding: 10px 0px;
     margin: 0 auto;
     width: 300px;
-    max-width: 100%;
+    max-width: 100%;+
+
+    &:hover {
+      background: var(--Button-Hover, #081f2d);;
+    }
   }
 }
 

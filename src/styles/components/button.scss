@@ -40,6 +40,13 @@
         color: #5A5A5A !important;
         opacity: 1;
         font-weight: 600 !important;
+
+        &:hover {
+          background-color: #EEEEEE !important;
+          color: #5A5A5A !important;
+          opacity: 1;
+          font-weight: 600 !important;
+        }
       }
     }
   }
