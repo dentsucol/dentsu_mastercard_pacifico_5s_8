@@ -27,6 +27,8 @@ function Progress() {
       : context?.user?.[`goal_category_1`]
 
   const sendDataEvent = (textElement) => {
+    console.log("textElement",textElement)
+    
     sendDataLayer({
       datalayer: { event: 'progress', text: textElement, link: '/premios' },
       repeat: true
