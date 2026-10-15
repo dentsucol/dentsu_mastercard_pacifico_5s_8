@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { StateController } from './../../App'
+import { Link } from "react-router-dom"
 
 import Container from '../../layouts/Container/Container'
 import ProgressBar from '../atoms/ProgressBar'
@@ -15,6 +16,7 @@ import FaqsFeed from '../organisms/FaqsFeed'
 import Icon from '../atoms/Icon'
 import BannerRedeemed from '../molecules/BannerRedeemed'
 
+
 function Progress() {
   const { context } = useContext(StateController)
   const { width } = useWidth()
@@ -24,7 +26,7 @@ function Progress() {
       ? context.user[`goal_category_1`] - context.tracing?.categories?.split(',').length
       : context?.user?.[`goal_category_1`]
 
-  const sendDataWinner = (textElement) => {
+  const sendDataEvent = (textElement) => {
     sendDataLayer({
       datalayer: { event: 'progress', text: textElement, link: '/premios' },
       repeat: true
@@ -203,7 +205,9 @@ function Progress() {
                         <strong>Una vez que cumplas tu meta podrás canjear tu premio</strong>
                       )}
                     </div>
-                    <a href="/premios" onClick={sendDataWinner("Consulta el catálogo de bonos")}>Consulta el catálogo de bonos</a>
+                    <Link to="/premios" className="mc-banner-redeemed__btn" onClick={(e) => sendDataEvent("Consulta el catálogo de bonos")}>
+                      Consulta el catálogo de bonos
+                    </Link>
                   </div>
                 )}
             </>
