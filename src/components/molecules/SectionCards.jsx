@@ -133,9 +133,6 @@ const SectionCards = ({ items, subtitle2, showGoalCounter, context, tabIndex }) 
                   </div>
                   {/* La nota legal va al pie de cada una de las dos columnas, es
                       decir en las dos últimas tarjetas de la grilla. */}
-                  {i >= visibleItems.length - 2 &&
-                    <p className='referencia'>*Imágenes de referencia</p>
-                  }
                 </div>
               ))
             }

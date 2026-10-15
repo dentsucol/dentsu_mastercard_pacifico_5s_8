@@ -79,7 +79,7 @@ function MajorAward() {
 
   const dataGroup = [
     {
-      title: 'Audífonos o US$500 ¡Tu premio te espera!',
+      title: 'Audífonos o US$500<br/>¡Tu premio te espera!',
       description: 'Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte unos audífonos Apple o Bose, o un bono Amazon o Tipti por US$500.',
       image: "majorAward-1"
     },
@@ -89,7 +89,7 @@ function MajorAward() {
       image: "majorAward-2"
     },
     {
-      title: 'Empaca maletas o llévate US$1,500',
+      title: 'Empaca maletas o<br/>llévate US$1,500',
       description: 'Usa tu Tarjeta Mastercard Débito del Pacífico para todo y podrás llevarte un viaje a Machu Picchu para 2 personas, o un bono Amazon o Tipti por US$1,500.',
       image: "majorAward-3"
     },

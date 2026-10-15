@@ -6,7 +6,7 @@ export function InfoCatalog({ dateText = "XX/XX/XXXX", type = 0 }) {
     {type === 1 && (
       <div className="mc-info-catalogo">
         <p>
-          <strong>¿No ve reflejadas todas sus compras?  </strong>
+          <strong>¿No ves reflejadas todas tus compras?</strong>
           La información se actualiza cada martes con hasta 7 días de retraso.
           <strong> Última actualización: {dateText}</strong>
         </p>

@@ -1647,6 +1647,10 @@
     background: var(--Button-Default, #002F87);
     height: 44px;
 
+    &:hover {
+      background: var(--Button-Hover, #081f2d);;
+    }
+
     @media only screen and (min-width: 992px) {
       display: flex;
       width: 221px;
@@ -1663,18 +1667,6 @@
       line-height: normal;
       text-decoration: none;
       margin: auto 32px;
-    }
-
-    &:hover {
-      @media only screen and (max-width: 992px) {
-        border: 1px solid var(--Outline-Low, #e0eefe);
-        background: var(--Background-Background-Medium, #b9dcfe);
-        transition: all 0.3s linear;
-        -webkit-transition: all 0.3s linear;
-        -moz-transition: all 0.3s linear;
-        -ms-transition: all 0.3s linear;
-        -o-transition: all 0.3s linear;
-      }
     }
   }
 }
@@ -1759,7 +1751,11 @@
     padding: 10px 0px;
     margin: 0 auto;
     width: 300px;
-    max-width: 100%;
+    max-width: 100%;+
+
+    &:hover {
+      background: var(--Button-Hover, #081f2d);;
+    }
   }
 }
 

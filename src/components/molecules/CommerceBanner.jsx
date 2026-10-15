@@ -6,7 +6,7 @@ function CommerceBanner({group}) {
       <div className="mc-commerce-banner__content">
         <div className="mc-commerce-banner__text">
           <h3 className="mc-commerce-banner__title">
-            {group.title}
+            <div dangerouslySetInnerHTML={{ __html: group.title }} />
           </h3>
           <p className="mc-commerce-banner__description">
             {group.description}
