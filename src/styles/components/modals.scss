@@ -132,6 +132,7 @@
 
       strong{
         color: #07254A;
+        font-family: "DIN Pro" !important;
       }
 
       &__image {
@@ -148,15 +149,24 @@
       }
 
       &__desc {
-        font-size: 18px !important;
         margin: 16px;
+        div {
+          font-family: "DIN Pro" !important;
+        }
+        
 
         small{
             margin-top: 16px;
+            font-family: "DIN Pro" !important;
 
           strong{
             font-size: 16px;
           }
+        }
+
+        h3{
+          color: #093469;
+          font-family: "DIN Pro" !important;
         }
       }
 
@@ -560,7 +570,7 @@
       color: var(--azul-2-pacifico, #005EB8);
       font-family: 'DIN Pro';
       text-align: center;
-      font-size: 24px;
+      font-size: 23px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -574,6 +584,7 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      margin: 16px 14px;
     }
     .specialAward{
       color: var(--Text-Text-Title, #07254A);
