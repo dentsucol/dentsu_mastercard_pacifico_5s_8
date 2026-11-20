@@ -422,7 +422,7 @@ function App({ error, token, loggedIn, logOutAction }) {
         <CustomModal
           push
           title={`¡Aprovecha el doble impulso!`}
-          desc='<strong>Desde el 19 de noviembre hasta el 2 de diciembre. </strong>Compra en línea, dentro o fuera del país, con tu <strong>Mastercard Débito del Pacífico.</strong><br/><h3>¡Y suma X2 para tu meta!<h3>'
+          desc='<strong>Desde el 19 de noviembre hasta el 2 de diciembre. </strong> Compra en línea o fuera del país con tu <strong>Mastercard Débito del Pacífico.</strong><br/><h3>¡Y suma X2 para tu meta!<h3>'
           cta="Quiero participar"
           class_name="aceletatorX2"
           image="x2.svg"
