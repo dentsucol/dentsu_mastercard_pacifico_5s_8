@@ -233,7 +233,7 @@ function App({ error, token, loggedIn, logOutAction }) {
 
   useEffect(() => {
     const isModalViewed = localStorage.getItem('viewImageModal')
-    if (!isModalViewed)  setShowAceletatorX2(false)
+    if (!isModalViewed)  setShowAceletatorX2(true)
   }, [context.user])
 
   useEffect(() => {
@@ -418,17 +418,19 @@ function App({ error, token, loggedIn, logOutAction }) {
         />
       )}
 
-      {showAceletatorX2 && (
+      {showAceletatorX2 && context && (
         <CustomModal
           push
-          title={`¡Estás a un paso de <br/> participar y ganar!`}
-          desc='Revisa el correo que te enviamos<br/>desde Banco Pacífico para acceder<br/>a la promoción.<br/><br/>¿Recibiste un código por<br/>WhatsApp? Ingrésalo para<br/>completar tu registro.'
+          title={`¡Aprovecha el doble impulso!`}
+          desc='<strong>Desde el 19 de noviembre hasta el 2 de diciembre. </strong> Compra en línea o fuera del país con tu <strong>Mastercard Débito del Pacífico.</strong><br/><h3>¡Y suma X2 para tu meta!<h3>'
           cta="Quiero participar"
           class_name="aceletatorX2"
+          image="x2.svg"
           primaryAction={{
-            buttonText: 'Quiero participar',
+            buttonText: 'Consulta tu progreso',
             loading: false,
-            //icon: "Redenciones.png"
+            icon: "Redenciones.png",
+            action: redirectProgress,
           }}
           icon={false}
           show={showAceletatorX2}
