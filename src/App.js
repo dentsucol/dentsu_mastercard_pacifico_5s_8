@@ -418,7 +418,7 @@ function App({ error, token, loggedIn, logOutAction }) {
         />
       )}
 
-      {showAceletatorX2 && (
+      {showAceletatorX2 && context && (
         <CustomModal
           push
           title={`¡Aprovecha el doble impulso!`}
