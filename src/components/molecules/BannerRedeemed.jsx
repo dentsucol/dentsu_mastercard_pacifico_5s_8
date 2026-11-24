@@ -23,7 +23,7 @@ function BannerRedeemed({type = "winner"}) {
           
           {type === "winner" ? 
           <>Tu bono ya está disponible para canjear.</> 
-          : <><strong>¡Ya redimiste tu bono!</strong>Puedes consultar su detalle.</> 
+          : <>¡Ya redimiste tu bono! Puedes consultar su detalle.</> 
           }
         </p>
       </div>
