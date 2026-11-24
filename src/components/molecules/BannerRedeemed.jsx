@@ -31,13 +31,13 @@ function BannerRedeemed({type = "winner"}) {
         {type === "winner" ? 
         <>
           <Link to="/premios" className="mc-banner-redeemed__btn" onClick={(e) => sendDataEvent("Canjear bono")}>
-            <Icon name="gift_white" />Canjear bono
+            <Icon name="gift_blue" />Canjear bono
           </Link>
         </>
         : 
         <>
           <Link to="/mis-redenciones" className="mc-banner-redeemed__btn" onClick={(e) => sendDataEvent("Ir al historial de bonos")}>
-            <Icon name="gift_white" />Ir al historial de bonos
+            <Icon name="gift_blue" />Ir al historial de bonos
           </Link>
         </>
         }

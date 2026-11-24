@@ -172,6 +172,26 @@ function Icon(props) {
         </span>
 
       }
+      
+      { props.name === "gift_blue" &&
+        <span className={`icon-${props.name}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <g clipPath="url(#clip0_14296_132)">
+              <path d="M3.33336 9.99982L3.33336 17.8332C3.33336 18.1093 3.55719 18.3332 3.83336 18.3332L16.1667 18.3332C16.4428 18.3332 16.6667 18.1093 16.6667 17.8332L16.6667 9.99982" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" stroke="#002F87"/>
+              <path d="M2.16665 5.83316L17.8333 5.83316C18.1095 5.83316 18.3333 6.05702 18.3333 6.33316L18.3333 9.49983C18.3333 9.776 18.1095 9.99983 17.8333 9.99983L2.16665 9.99983C1.89048 9.99983 1.66665 9.77599 1.66665 9.49983L1.66665 6.33316C1.66665 6.05702 1.89048 5.83316 2.16665 5.83316Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" stroke="#002F87"/>
+              <path d="M10 18.3332L10 5.83316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" stroke="#002F87"/>
+              <path d="M9.99998 5.83314L13.75 5.83314C14.3025 5.83314 14.8324 5.61365 15.2231 5.22295C15.6138 4.83225 15.8333 4.30234 15.8333 3.74981C15.8333 3.19728 15.6138 2.66737 15.2231 2.27667C14.8324 1.88597 14.3025 1.66648 13.75 1.66647C10.8333 1.66647 9.99998 5.83314 9.99998 5.83314Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" stroke="#002F87"/>
+              <path d="M10 5.83314L6.25 5.83314C5.6975 5.83314 5.16759 5.61365 4.77684 5.22295C4.38617 4.83225 4.16667 4.30234 4.16667 3.74981C4.16667 3.19727 4.38617 2.66737 4.77684 2.27667C5.16759 1.88597 5.6975 1.66647 6.25 1.66647C9.16667 1.66648 10 5.83314 10 5.83314Z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" stroke="#002F87"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_14296_132">
+                <rect width="20" height="20" fill="white" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 20 1.74846e-06)"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </span>
+
+      }
 
 
     </div>
